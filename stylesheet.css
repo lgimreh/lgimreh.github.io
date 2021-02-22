@@ -198,7 +198,7 @@ nav {
     margin-right:auto;
   }
   .centerCell img {
-    display:inline-block;
+    display:block;
     text-align:center;
     margin-left:auto;
     margin-right:auto;
