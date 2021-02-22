@@ -214,6 +214,12 @@ nav {
     max-width:90vw;
     max-height:60vh;
   }
+  .responsive {
+    margin: 3px;
+    display: inline-table;
+    text-align:center;
+    height: 24.99999%;
+  }
   @media screen and (max-width: 991px) {
     /* start of large tablet styles */
     
@@ -238,6 +244,10 @@ nav {
       margin:3px;
       overflow:hidden;
       ;
+    }
+    .responsive {
+      height: 49.99999%;
+      margin: 3px;
     }
     .image-fit {
       display:inline-block;
@@ -274,6 +284,10 @@ nav {
       margin-left:auto;
       margin-right:auto;
       max-width:30vw;
+    }
+    .responsive {
+      height: 80%;
+      margin: 3px;
     }
     }
   ul {
