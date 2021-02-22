@@ -202,7 +202,7 @@ nav {
     text-align:center;
     margin-left:auto;
     margin-right:auto;
-    max-width:90vw;
+    overflow:hidden;
     max-height:60vh;
   }
   .image-fit {
