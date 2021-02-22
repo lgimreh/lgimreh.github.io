@@ -198,7 +198,7 @@ nav {
     margin-right:auto;
   }
   .centerCell img {
-    display:block;
+    display:inline-block;
     text-align:center;
     margin-left:auto;
     margin-right:auto;
@@ -213,7 +213,26 @@ nav {
     max-width:90vw;
     max-height:60vh;
   }
-
+  @media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+    
+    }
+    
+    @media screen and (max-width: 767px) {
+    /* start of medium tablet styles */
+    
+    }
+    
+    @media screen and (max-width: 479px) {
+    /* start of phone styles */
+    .centerCell img {
+      display:block;
+      text-align:center;
+      margin:3px;
+      overflow:hidden;
+      height:30vh;
+    }
+    }
   ul {
     list-style-type: none;
     margin: 0;
@@ -257,4 +276,9 @@ nav {
     transform: scale(2.0);
     max-width: 90vw; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     max-height: 50vh
+  }
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
   }
