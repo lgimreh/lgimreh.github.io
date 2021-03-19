@@ -34,6 +34,9 @@ h1 {
   p a {    
     color: #2e5339;
   }
+  p a.active {
+    font-weight: bold;
+  }
   p a:hover:not(.active) {
     color: #ffa69e;
   }
