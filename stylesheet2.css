@@ -1,0 +1,251 @@
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color:#ffffff;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-color:#2e5339;
+    z-index:10
+  }
+  /* headings */
+    h1 {
+      text-align: right;
+      font-family:'Consolas', Courier, monospace;
+      font-size: 1.3em;
+      color: #2e5339;
+      margin:1px;
+    }
+  
+    h2 {
+      text-align: center;
+      font-family:'Consolas', Courier, monospace;
+      font-size: 1em;
+      color: #2e5339;
+    }
+    
+    h3 {
+      text-align: left;
+      font-family:'Consolas', Courier, monospace;
+      font-size: 1em;
+      color: #2e5339;
+    }
+
+    h4 {
+      text-align: center;
+      font-family:'Consolas', Courier, monospace;
+      font-weight:bold;
+      font-size: 3em;
+      margin: 0.5em;
+      color: #2e5339;
+    }
+
+    p {
+      font-family:'Consolas', Courier, monospace;
+      font-size: 0.8em;
+      color: #2e5339;
+    }
+  
+    p a {    
+      color: #2e5339;
+      text-decoration:solid;
+    }
+    p a.active {
+      font-weight: bold;
+      text-decoration:solid;
+    }
+    p a:hover:not(.active) {
+      color: #ffa69e;
+      text-decoration:solid;
+    }
+  /* navigation */
+  nav {
+    display: block;
+  }
+  ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+    font-family: 'Consolas', Courier, monospace;
+    font-style: italic;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: #2e5339;
+    text-align: center;
+    padding: 0.1em 0.5em;
+    text-decoration:solid;
+  }
+  
+  li a:hover:not(.active) {
+    color: #ffa69e;
+    text-decoration:solid;
+  }
+  
+  li a.active {
+    color: #2e5339;
+    font-weight: bold;
+    background-color: #fff;
+    text-decoration:underline;
+  }
+
+  /*GENERAL ZOOM*/
+.zoom {
+    transition: transform .5s; /* Animation */
+  }
+  
+  .zoom:hover {
+    transform: scale(1.75);
+  }
+
+  /*COLUMNS*/
+  .row:after {
+    display: flex;
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .column {
+    float: left;
+    display: table;
+  }
+  .centering {
+    margin-left:auto;
+    margin-right:auto;
+    width: 80%;
+    text-align: center;
+  }
+  .centering-small {
+    margin-left:auto;
+    margin-right:auto;
+    width: 60%;
+    text-align: center;
+  }
+  .full {
+    width: 100%;
+  }
+  .threequarters {
+      display:table-cell;
+      width:74%;
+  }
+  .twothirds {
+    display:table-cell;
+    width: 66%;
+  }
+  .half {
+    display:table-cell;
+    width: 50%;
+  }
+  .third {
+    display:table-cell;
+    width: 33%;
+  }
+  .quarter {
+    display:table-cell;
+    width: 25%;
+  }
+  .left { 
+    float: left;
+  }
+  .right {
+    float: right;
+  }  
+  .pad {
+    padding-left:10px;
+    padding-right:10px;
+  }
+
+  /*RESPONSIVENESS*/
+  @media screen and (max-width: 800px) {
+    .row {
+      display:block;
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .centering {
+        margin-left:auto;
+        margin-right:auto;
+        width: 100%;
+    }    
+    .centering-small {
+        margin-left:auto;
+        margin-right:auto;
+        width: 100%;
+    }    
+    .column {
+      width:100%;
+    }
+    .threequarters {
+        width:100%;
+    }
+    .half {
+        width: 100%;
+      }
+    .twothirds {
+        width: 100%;
+    }
+    .third {
+        width: 100%;
+    }
+    .quarter {
+      width:50%;
+    }
+    .zoom {
+        transform: none !important
+    }
+    .zoom:hover {
+        transform: none !important
+      }
+  }
+
+  /*TEXT STYLES*/
+    .body {
+        text-align:justify;
+        padding:0px 3px 10px;
+        text-indent:20px;
+    }
+    .caption {
+        text-align:right;
+        padding: 0px 3px;
+        margin:0px 0px 20px;
+    }
+    .line {
+        color:#2e5339;
+        border-bottom: 1px;
+    }
+
+/*IMAGES*/
+    .fit {
+        width: 100%;
+        object-fit:scale-down;
+        padding: 0px 0px 6px;
+    }
+    .upfit {
+        width:100%;
+        object-fit:cover;
+        overflow:hidden;
+        padding: 0px 0px 6px;
+    }
+
+/*MAGNIFYING GLASS*/
+* {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 1px solid #2e5339;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
+}
