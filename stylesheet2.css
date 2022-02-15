@@ -91,7 +91,6 @@
   li a.active {
     color: #2e5339;
     font-weight: bold;
-    background-color: #fff;
     text-decoration:underline;
   }
 
@@ -103,7 +102,25 @@
   .zoom:hover {
     transform: scale(1.75);
   }
+  /*Dark style*/
+  .dark {
+    background-color: #000;
+  }
+  .body, div, p, h1, h2, h3, h4, h5, h6, a, li a, p a, li a.active ul, li, hr {
+    color:#2e5339;
+    border-color: #2e5339;
+  }
+  body.dark div, body.dark p,body.dark h1,body.dark h2,body.dark h3,body.dark h4,body.dark h5,body.dark h6,body.dark a,body.dark li a,body.dark p a,body.dark li a.active, body.dark ul,body.dark li,body.dark hr {
+    color: #a1e1ec;
+    border-color: #a1e1ec;
+  }
+  .shadow {
+    text-shadow: 0px 1px 2px black;
+  }
 
+img {
+  filter:none;
+}
   /*COLUMNS*/
   .row:after {
     display: flex;
@@ -195,7 +212,7 @@
         width: 100%;
     }
     .quarter {
-      width:50%;
+      width:100%;
     }
     .zoom {
         transform: none !important
@@ -233,6 +250,9 @@
         overflow:hidden;
         padding: 0px 0px 6px;
     }
+    .inline {
+      display:inline-block;
+    }
 
 /*MAGNIFYING GLASS*/
 * {box-sizing: border-box;}
@@ -248,4 +268,37 @@
   /*Set the size of the magnifier glass:*/
   width: 100px;
   height: 100px;
+}
+
+
+.layered {
+  display: grid;
+}
+.jcenter {
+  /* Set horizontal alignment of items in, case they have a different width. */
+  /* justify-items: start | end | center | stretch (default); */
+  justify-items: center;
+  /* Set vertical alignment of items, in case they have a different height. */
+  /* align-items: start | end | center | stretch (default); */
+  align-items: center;
+
+}
+.jright {
+  justify-items: right;
+  align-items: start;
+}
+.jleft {
+  justify-items: left;
+  align-items:start;
+}
+
+.layered > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.first {
+  z-index: 9;
+}
+.last {
+  z-index: 1;
 }
