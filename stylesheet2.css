@@ -7,10 +7,31 @@
     border-color:#2e5339;
     z-index:10
   }
+
+
+  @font-face {
+    font-family: 'ibm_plex_monoregular';
+    src: url('/IBM_Plex_Mono/ibmplexmono-regular-webfont.woff2') format('woff2'),
+         url('/IBM_Plex_Mono/ibmplexmono-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'ibm_plex_monomedium';
+  src: url('/IBM_Plex_Mono/ibmplexmono-medium-webfont.woff2') format('woff2'),
+       url('/IBM_Plex_Mono/ibmplexmono-medium-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+
   /* headings */
     h1 {
       text-align: right;
-      font-family:'IBM Plex Mono', Courier, monospace;
+      font-family:'ibm_plex_monomedium', Courier, monospace;
       font-size: 1.3em;
       color: #2e5339;
       margin:1px;
@@ -18,35 +39,34 @@
   
     h2 {
       text-align: center;
-      font-family:'IBM Plex Mono', Courier, monospace;
+      font-family:'ibm_plex_monomedium', Courier, monospace;
       font-size: 1em;
       color: #2e5339;
     }
     
     h3 {
       text-align: left;
-      font-family:'IBM Plex Mono', Courier, monospace;
+      font-family:'ibm_plex_monomedium', Courier, monospace;
       font-size: 1em;
       color: #2e5339;
     }
 
     label, input {
-      font-family:'IBM Plex Mono', Courier, monospace;
+      font-family:'ibm_plex_monoregular', Courier, monospace;
       font-size: 0.8em;
       color: #2e5339;
     }
 
     h4 {
       text-align: center;
-      font-family:'IBM Plex Mono', Courier, monospace;
-      font-weight:bold;
+      font-family:'ibm_plex_monomedium', Courier, monospace;
       font-size: 3em;
       margin-bottom: 0em;
       color: #2e5339;
     }
 
     p {
-      font-family:'IBM Plex Mono', Courier, monospace;
+      font-family:'ibm_plex_monoregular', Courier, monospace;
       font-size: 0.8em;
       color: #2e5339;
     }
@@ -73,7 +93,7 @@
     padding: 0;
     overflow: hidden;
     background-color: #fff;
-    font-family: 'IBM Plex Mono', Courier, monospace;
+    font-family: 'ibm_plex_monoregular', Courier, monospace;
     font-style: italic;
   }
   
