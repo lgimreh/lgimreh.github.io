@@ -10,7 +10,7 @@
   /* headings */
     h1 {
       text-align: right;
-      font-family:'Consolas', Courier, monospace;
+      font-family:'IBM Plex Mono', Courier, monospace;
       font-size: 1.3em;
       color: #2e5339;
       margin:1px;
@@ -18,29 +18,35 @@
   
     h2 {
       text-align: center;
-      font-family:'Consolas', Courier, monospace;
+      font-family:'IBM Plex Mono', Courier, monospace;
       font-size: 1em;
       color: #2e5339;
     }
     
     h3 {
       text-align: left;
-      font-family:'Consolas', Courier, monospace;
+      font-family:'IBM Plex Mono', Courier, monospace;
       font-size: 1em;
+      color: #2e5339;
+    }
+
+    label, input {
+      font-family:'IBM Plex Mono', Courier, monospace;
+      font-size: 0.8em;
       color: #2e5339;
     }
 
     h4 {
       text-align: center;
-      font-family:'Consolas', Courier, monospace;
+      font-family:'IBM Plex Mono', Courier, monospace;
       font-weight:bold;
       font-size: 3em;
-      margin: 0.5em;
+      margin-bottom: 0em;
       color: #2e5339;
     }
 
     p {
-      font-family:'Consolas', Courier, monospace;
+      font-family:'IBM Plex Mono', Courier, monospace;
       font-size: 0.8em;
       color: #2e5339;
     }
@@ -67,7 +73,7 @@
     padding: 0;
     overflow: hidden;
     background-color: #fff;
-    font-family: 'Consolas', Courier, monospace;
+    font-family: 'IBM Plex Mono', Courier, monospace;
     font-style: italic;
   }
   
@@ -165,7 +171,7 @@ img {
   }
   .quarter {
     display:table-cell;
-    width: 25%;
+    width: 24.5%;
   }
   .left { 
     float: left;
@@ -228,11 +234,23 @@ img {
         padding:0px 3px 10px;
         text-indent:20px;
     }
+
+    .normaltext {
+      text-align:justify;
+      padding:0px 3px 10px;
+  }
+
     .caption {
         text-align:right;
         padding: 0px 3px;
         margin:0px 0px 20px;
     }
+    .middle {
+        text-align:center;
+        padding:0px 3px 10px;
+        text-indent:0px;
+    }
+
     .line {
         color:#2e5339;
         border-bottom: 1px;

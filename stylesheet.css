@@ -9,7 +9,7 @@
 /* headings */
   h1 {
     text-align: right;
-    font-family:'Consolas', Courier, monospace;
+    font-family:'IBM Plex Mono', Courier, monospace;
     font-size: 1.3em;
     color: #2e5339;
     margin:1px;
@@ -17,21 +17,21 @@
 
   h2 {
     text-align: center;
-    font-family:'Consolas', Courier, monospace;
+    font-family:'IBM Plex Mono', Courier, monospace;
     font-size: 1em;
     color: #2e5339;
   }
   
   h3 {
     text-align: left;
-    font-family:'Consolas', Courier, monospace;
+    font-family:'IBM Plex Mono', Courier, monospace;
     font-size: 1em;
     color: #2e5339;
   }
 
   h4 {
     text-align: center;
-    font-family:'Consolas', Courier, monospace;
+    font-family:'IBM Plex Mono', Courier, monospace;
     font-weight:bold;
     font-size: 3em;
     margin: 0.5em;
@@ -39,7 +39,7 @@
   }
 
   p {
-    font-family:'Consolas', Courier, monospace;
+    font-family:'IBM Plex Mono', Courier, monospace;
     font-size: 0.8em;
     color: #2e5339;
   }
@@ -66,7 +66,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #fff;
-  font-family: 'Consolas', Courier, monospace;
+  font-family: 'IBM Plex Mono', Courier, monospace;
   font-style: italic;
 }
 
@@ -265,7 +265,7 @@ li a.active {
 
   /* further styles */
   .centerCell {
-    font-family:'Consolas', Courier, monospace;
+    font-family:'IBM Plex Mono', Courier, monospace;
     font-size: 0.8em;
     color: #2e5339;
     display: block;
@@ -305,7 +305,7 @@ li a.active {
     /* start of medium tablet styles */
     .centerCell {
       text-align: center;
-      font-family:'Consolas', Courier, monospace;
+      font-family:'IBM Plex Mono', Courier, monospace;
       font-size: 0.8em;
       color: #2e5339;
       display: block;
@@ -338,7 +338,7 @@ li a.active {
     /* start of phone styles */
     .centerCell {
       text-align: center;
-      font-family:'Consolas', Courier, monospace;
+      font-family:'IBM Plex Mono', Courier, monospace;
       font-size: 0.8em;
       color: #2e5339;
       display: block;
@@ -372,7 +372,7 @@ li a.active {
     padding: 0;
     overflow: hidden;
     background-color: #fff;
-    font-family: 'Consolas', Courier, monospace;
+    font-family: 'IBM Plex Mono', Courier, monospace;
     font-style:italic;
   }
   
