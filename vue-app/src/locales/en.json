@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "this-project": {
+      "name": "This project",
+      "description_1": "this is a first description",
+      "description_2": "this is a second description"
+    },
+    "that-project": {
+      "name": "That project",
+      "description_1": "this is a first description",
+      "description_2": "this is a second description"
+    }
+  }
+}

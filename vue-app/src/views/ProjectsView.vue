@@ -1,5 +1,24 @@
 <template>
   <div class="projects">
-    <h1>This is the projects page</h1>
+    <div v-for="project in projects" :key="project + '_link'">
+      <div @click="navigateToProject(project)">
+        {{ $t("projects." + project + ".name") }}
+      </div>
+    </div>
   </div>
 </template>
+<script>
+export default {
+  name: "ProjectsView",
+  data() {
+    return {
+      projects: ["that-project", "this-project"],
+    };
+  },
+  methods: {
+    navigateToProject(project) {
+      this.$router.push("project/" + project);
+    },
+  },
+};
+</script>
