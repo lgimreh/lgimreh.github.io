@@ -1,6 +1,10 @@
 <template>
-  <div class="projects">
-    <div v-for="project in projects" :key="project + '_link'">
+  <div class="projects page wrapper">
+    <div
+      class="item interact"
+      v-for="project in projects"
+      :key="project + '_link'"
+    >
       <div @click="navigateToProject(project)">
         {{ $t("projects." + project + ".name") }}
       </div>
@@ -12,7 +16,7 @@ export default {
   name: "ProjectsView",
   data() {
     return {
-      projects: ["that-project", "this-project"],
+      projects: ["rave-runner", "portals"],
     };
   },
   methods: {
@@ -22,3 +26,4 @@ export default {
   },
 };
 </script>
+<style scoped></style>

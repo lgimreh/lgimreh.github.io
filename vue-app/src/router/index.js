@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import BioView from "../views/BioView.vue";
 
 const routes = [
   {
@@ -7,9 +7,9 @@ const routes = [
     redirect: "/bio",
   },
   {
-    path: "/",
+    path: "/bio",
     name: "bio",
-    component: HomeView,
+    component: BioView,
   },
   {
     path: "/projects",
@@ -23,6 +23,18 @@ const routes = [
     props: true,
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/SingleProjectView.vue"),
+  },
+  {
+    path: "/renderings",
+    name: "renderings",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/RenderingsView.vue"),
+  },
+  {
+    path: "/personnal-art",
+    name: "personnal-art",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/RenderingsView.vue"),
   },
 ];
 const router = createRouter({

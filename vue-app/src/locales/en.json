@@ -1,14 +1,39 @@
 {
+  "nav": {
+    "bio": "Bio",
+    "projects": "Projects",
+    "renderings": "Renderings",
+    "personnal-art": "Personnal Art"
+  },
   "projects": {
-    "this-project": {
-      "name": "This project",
-      "description_1": "this is a first description",
-      "description_2": "this is a second description"
+    "rave-runner": {
+      "name": "Rave Runner",
+      "small_desc": "Speculative architecture generator",
+      "authors": "Antoine Blais, Victor Demers, Simon Gavioli",
+      "date": "",
+      "additionnal": ""
     },
-    "that-project": {
-      "name": "That project",
-      "description_1": "this is a first description",
-      "description_2": "this is a second description"
+    "portals": {
+      "name": "Portals",
+      "small_desc": "A gradual immersion into the 'friche'",
+      "authors": "Sarah Ibrahim",
+      "date": "Autumn 2022",
+      "additionnal": "supervised by Samuel Bernier-Lavigne"
     }
+  },
+  "bio": {
+    "bio_text": "Architecture student at the Université Laval School of Architecture.",
+    "bio_title": "B. Sc. arch.",
+    "achiev_section": {
+      "title": "Achievements"
+    },
+    "achiev": [
+      {
+        "1": "Honorable mention in",
+        "link": "Architecture of Illusions",
+        "2": "essay competition by Buildner.",
+        "link_url": "https://www.google.com"
+      }
+    ]
   }
 }
