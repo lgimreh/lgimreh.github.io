@@ -35,4 +35,9 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+.picture {
+  height: 400px;
+  width: 400px;
+}
+</style>

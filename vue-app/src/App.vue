@@ -1,6 +1,8 @@
 <template>
   <custom-nav></custom-nav>
-  <router-view />
+  <div class="router">
+    <router-view />
+  </div>
 </template>
 <script>
 import NavBarComponent from "./components/navigation/NavBarComponent.vue";
@@ -21,7 +23,13 @@ export default {
 :root {
   --white: #f5f5f5;
   --black: #0f0f0f;
-  --page-pad-t: 120px;
+  --page-pad-t: 60px;
+}
+#app {
+  z-index: 0;
+}
+nav {
+  z-index: 100;
 }
 * {
   margin: 0;
@@ -29,6 +37,7 @@ export default {
   box-sizing: border-box;
   color: var(--black);
   white-space: nowrap;
+  position: relative;
 }
 a {
   text-decoration: none;
@@ -61,5 +70,22 @@ body {
 }
 .interact:hover {
   cursor: pointer;
+}
+.router {
+  z-index: 0;
+  position: relative;
+}
+.picture {
+  background-color: #767676;
+}
+*::-webkit-scrollbar {
+  background-color: var(--white);
+}
+*::-webkit-scrollbar-button {
+  display: none;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--black);
+  /* 5 */
 }
 </style>
