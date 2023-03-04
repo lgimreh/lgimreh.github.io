@@ -12,13 +12,14 @@
         class="item"
       >
         <p>
-          {{ $t("bio.achiev[" + (index - 1) + "].1") }}
+          {{ $t("bio.achiev[" + (index - 1) + "].1") }}&nbsp;
           <a
             target="_blank"
             :href="$t('bio.achiev[' + (index - 1) + '].link_url')"
-            >{{ $t("bio.achiev[" + (index - 1) + "].link") }}</a
           >
-          {{ $t("bio.achiev[" + (index - 1) + "].2") }}
+            {{ $t("bio.achiev[" + (index - 1) + "].link") }}</a
+          >
+          &nbsp;{{ $t("bio.achiev[" + (index - 1) + "].2") }}
         </p>
       </div>
     </div>
@@ -39,5 +40,9 @@ export default {
 .picture {
   height: 400px;
   width: 400px;
+}
+.achievements .item p {
+  display: flex;
+  flex-wrap: wrap;
 }
 </style>

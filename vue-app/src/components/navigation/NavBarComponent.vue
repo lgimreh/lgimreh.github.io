@@ -1,113 +1,139 @@
 <template>
-  <nav>
-    <div class="desktop fixed" :class="{ active: windowTop > 200 }">
+  <div>
+    <div
+      class="nav static"
+      v-for="i in 2"
+      :key="'nav_' + i"
+      :class="{ static: i === 1, fixed: i === 2, active: fixedActive }"
+    >
       <div class="wrapper">
         <div class="row">
-          <router-link to="/bio"><h1>Louis-Gabriel Imreh</h1></router-link>
-          <ul class="row">
-            <li>
-              <router-link to="/projects">{{ $t("nav.projects") }}</router-link>
-            </li>
-            <li>
-              <router-link to="/renderings">{{
-                $t("nav.renderings")
-              }}</router-link>
-            </li>
-            <li>
-              <router-link to="/personnal-art">{{
-                $t("nav.personnal-art")
-              }}</router-link>
-            </li>
-          </ul>
+          <div @click="navigateTo('/bio')" class="link">
+            <h1>Louis-Gabriel Imreh</h1>
+          </div>
         </div>
-      </div>
-    </div>
-  </nav>
-  <div class="desktop static">
-    <div class="wrapper">
-      <div class="row">
-        <router-link to="/bio"><h1>Louis-Gabriel Imreh</h1></router-link>
-        <ul class="row">
-          <li>
-            <router-link to="/projects">{{ $t("nav.projects") }}</router-link>
-          </li>
-          <li>
-            <router-link to="/renderings">{{
-              $t("nav.renderings")
-            }}</router-link>
-          </li>
-          <li>
-            <router-link to="/personnal-art">{{
-              $t("nav.personnal-art")
-            }}</router-link>
-          </li>
-          <li><change-lang></change-lang></li>
-        </ul>
+        <div class="row">
+          <div @click="navigateTo('/bio')" class="link">
+            <h4>{{ $t("nav.bio") }}</h4>
+          </div>
+          <div @click="navigateTo('/renders')" class="link">
+            <h4>{{ $t("nav.renderings") }}</h4>
+          </div>
+          <div @click="navigateTo('/personnal-art')" class="link">
+            <h4>{{ $t("nav.personnal-art") }}</h4>
+          </div>
+          <div class="btn" @click="changeLang()">
+            <h4>{{ nextLang }}</h4>
+          </div>
+          <div @click="navigateTo('/projects')" class="btn">
+            <h4>{{ $t("nav.projects") }}</h4>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
+
 <script>
-import ChangeLangComponent from "@/components/navigation/ChangeLangComponent.vue";
 export default {
-  name: "NavBarComponent",
+  name: "NavBar",
   data() {
-    return { windowTop: 0 };
+    return {
+      fixedActive: false,
+      currentLang: "",
+    };
   },
-  components: {
-    "change-lang": ChangeLangComponent,
+  beforeMount() {
+    window.addEventListener("scroll", this.handleScroll);
   },
   mounted() {
-    window.addEventListener("scroll", this.onScroll);
+    this.currentLang = this.$i18n.locale;
+  },
+  computed: {
+    nextLang() {
+      let x = "En";
+      if (this.currentLang === "en") {
+        x = "Fr";
+      }
+      return x;
+    },
   },
   beforeUnmount() {
-    window.removeEventListener("scroll", this.onScroll);
+    window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
-    onScroll() {
-      this.windowTop = window.top.scrollY;
+    handleScroll() {
+      this.fixedActive = window.scrollY > 100;
+    },
+    navigateTo(path) {
+      this.$router.push({ path: path, replace: true });
+    },
+    changeLang() {
+      if (this.currentLang === "fr") {
+        this.$i18n.locale = "en";
+        this.currentLang = "en";
+      } else {
+        console.log("wassup");
+        this.$i18n.locale = "fr";
+        this.currentLang = "fr";
+      }
     },
   },
 };
 </script>
+
 <style scoped>
-.row {
+.nav {
+  width: 100%;
+}
+.nav.static {
+  border-bottom: 1px solid var(--white);
+}
+.nav.fixed * {
+  color: var(--black);
+}
+.nav.fixed {
+  position: fixed;
+  background-color: var(--white);
+  top: 0;
+  height: fit-content;
+  transform: translateY(-150px);
+  transition: transform 250ms linear;
+  z-index: 200;
+}
+.nav.fixed.active {
+  transform: translateY(0);
+}
+.nav.fixed h1 {
+  font-size: 26px;
+}
+.nav.fixed .link {
+  padding: 10px 0;
+}
+.nav.fixed .btn {
+  border: 1px solid var(--black);
+}
+.nav .link {
+  height: 100%;
+  padding: 20px 0;
+  width: fit-content;
+}
+.nav .link:hover {
+  cursor: pointer;
+}
+.nav .row {
   align-items: center;
   gap: 20px;
 }
-.desktop {
-  width: 100%;
+.change-lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 85px;
 }
-.desktop.fixed {
-  transform: translateY(-100%);
-  transition: transform 250ms linear;
-  background-color: var(--black);
-}
-.desktop.fixed.active {
-  transform: translateY(0);
-}
-.desktop.fixed * {
-  color: var(--white);
-}
-.desktop.static {
-  width: 100%;
-  background-color: var(--white);
-  border-bottom: 1px solid var(--black);
-}
-.desktop .wrapper > .row {
+.wrapper {
+  display: flex;
   justify-content: space-between;
-  width: 100%;
-}
-nav {
-  position: fixed;
-  width: 100%;
-  height: 0;
-  top: 0;
-}
-.desktop.static a {
-  padding: 30px 0;
-}
-.desktop.fixed a {
-  padding: 15px 0;
+  align-items: center;
 }
 </style>

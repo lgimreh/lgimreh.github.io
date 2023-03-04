@@ -20,13 +20,46 @@ export default {
 };
 </script>
 <style>
-:root {
-  --white: #f5f5f5;
-  --black: #0f0f0f;
-  --page-pad-t: 60px;
-}
 #app {
   z-index: 0;
+}
+:root {
+  --black: #0e0e0e;
+  --white: #efefef;
+  --page-pad-t: 60px;
+}
+.row {
+  display: flex;
+  gap: 20px;
+}
+* {
+  font-family: "Roboto Slab", serif;
+  /*font-family: "Raleway", sans-serif;*/
+}
+#app {
+  width: 100%;
+  min-height: 200vh;
+  background-color: var(--black);
+}
+#content {
+  height: 100%;
+  width: 100%;
+}
+.interact:hover {
+  cursor: pointer;
+}
+.wrapper {
+  max-width: 1440px;
+  margin: auto;
+}
+.page {
+  margin-top: 100px;
+}
+.btn {
+  cursor: pointer;
+  border-radius: 50px;
+  border: 1px solid var(--white);
+  padding: 10px 30px;
 }
 nav {
   z-index: 100;
@@ -35,12 +68,12 @@ nav {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--black);
+  color: var(--white);
   white-space: nowrap;
   position: relative;
 }
 a {
-  text-decoration: none;
+  text-decoration: underline;
   display: block;
 }
 ul {
@@ -79,13 +112,15 @@ body {
   background-color: #767676;
 }
 *::-webkit-scrollbar {
-  background-color: var(--white);
+  width: 10px;
+  border-radius: 50px;
+  overflow: hidden;
 }
-*::-webkit-scrollbar-button {
-  display: none;
+*::-webkit-scrollbar-track {
+  background: var(--white);
 }
 *::-webkit-scrollbar-thumb {
-  background-color: var(--black);
-  /* 5 */
+  background: var(--black);
+  border-radius: 50px;
 }
 </style>

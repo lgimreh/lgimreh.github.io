@@ -1,11 +1,11 @@
 <template>
-  <div id="rave-runner">
-    <h1>Rave RUUUUUNNNNERRRR</h1>
+  <div id="portals">
+    <h1>Portals</h1>
   </div>
 </template>
 <script>
 export default {
-  name: "RaveRunnerComponent",
+  name: "PortalsComponent",
   data() {
     return {};
   },

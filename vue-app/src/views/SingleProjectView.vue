@@ -11,15 +11,18 @@
     </div>
   </div>
   <div class="project page wrapper">
-    <rave-runner-component v-if="id === 'that-project'"></rave-runner-component>
+    <rave-runner-component v-if="id === 'rave-runner'"></rave-runner-component>
+    <portals-component v-if="id === 'portals'"></portals-component>
   </div>
 </template>
 <script>
 import RaveRunnerCmponent from "@/components/projects/RaveRunnerComponent.vue";
+import PortalsComponent from "@/components/projects/PortalsComponent.vue";
 export default {
   name: "SingleProject",
   components: {
     "rave-runner-component": RaveRunnerCmponent,
+    "portals-component": PortalsComponent,
   },
   props: ["id"],
   data() {
