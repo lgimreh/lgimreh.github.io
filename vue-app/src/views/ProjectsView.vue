@@ -18,7 +18,7 @@ export default {
   name: "ProjectsView",
   data() {
     return {
-      projects: ["rave-runner", "portals", "deja-vu"],
+      projects: ["rave-runner", "portals", "deja-vu", "nouveau"],
     };
   },
   methods: {

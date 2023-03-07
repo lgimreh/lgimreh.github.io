@@ -26,6 +26,7 @@ export default {
 :root {
   --black: #0e0e0e;
   --white: #efefef;
+  --bg-pale: rgba(255, 255, 255, 0.1);
   --page-pad-t: 60px;
 }
 .row {
@@ -56,10 +57,15 @@ export default {
   margin-top: 100px;
 }
 .btn {
-  cursor: pointer;
   border-radius: 50px;
   border: 1px solid var(--white);
   padding: 10px 30px;
+  transition: all 150ms linear;
+}
+.btn:hover {
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: var(--bg-pale);
 }
 nav {
   z-index: 100;
