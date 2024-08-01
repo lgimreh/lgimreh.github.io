@@ -1,0 +1,377 @@
+/*FONT*/
+/* Light and light italic */
+@font-face {
+    font-family: 'telegraf';
+    src: url('/fonts/PPTelegraf-Ultralight.ttf') format('ttf'),
+         url('/fonts/PPTelegraf-Ultralight.woff') format('woff'),
+         url('/fonts/PPTelegraf-Ultralight.woff2') format('woff2'); 
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'telegraf';
+    src: url('/fonts/PPTelegraf-UltralightSlanted.ttf') format('ttf'),
+         url('/fonts/PPTelegraf-UltralightSlanted.woff') format('woff'),
+         url('/fonts/PPTelegraf-UltralightSlanted.woff2') format('woff2'); 
+    font-weight: lighter;
+    font-style: italic;
+}
+
+
+/* Regular and regular italic */
+@font-face {
+    font-family: 'telegraf';
+    src: url('/fonts/PPTelegraf-Regular.ttf') format('ttf'),
+         url('/fonts/PPTelegraf-Regular.woff') format('woff'),
+         url('/fonts/PPTelegraf-Regular.woff2') format('woff2'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'telegraf';
+    src: url('/fonts/PPTelegraf-RegularSlanted.ttf') format('ttf'),
+         url('/fonts/PPTelegraf-RegularSlanted.woff') format('woff'),
+         url('/fonts/PPTelegraf-RegularSlanted.woff2') format('woff2'); 
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Bold and bold italic */
+@font-face {
+    font-family: 'telegraf';
+    src: url('/fonts/PPTelegraf-Ultrabold.ttf') format('ttf'),
+         url('/fonts/PPTelegraf-Ultrabold.woff') format('woff'),
+         url('/fonts/PPTelegraf-Ultrabold.woff2') format('woff2'); 
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'telegraf';
+    src: url('/fonts/PPTelegraf-UltraboldSlanted.ttf') format('ttf'),
+         url('/fonts/PPTelegraf-UltraboldSlanted.woff') format('woff'),
+         url('/fonts/PPTelegraf-UltraboldSlanted.woff2') format('woff2'); 
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*BULMER*/
+/* Regular and regular italic */
+@font-face {
+    font-family: 'bulmer';
+    src: url('/fonts/BulmerMTStd-Regular.woff') format('woff'),
+         url('/fonts/BulmerMTStd-Regular.woff2') format('woff2'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bulmer';
+    src: url('/fonts/BulmerMTStd-Italic.woff') format('woff'),
+         url('/fonts/BulmerMTStd-Italic.woff2') format('woff2'); 
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Bold and bold italic */
+@font-face {
+    font-family: 'bulmer';
+    src: url('/fonts/BulmerMTStd-Bold.woff') format('woff'),
+         url('/fonts/BulmerMTStd-Bold.woff2') format('woff2'); 
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bulmer';
+    src: url('/fonts/BulmerMTStd-BoldItalic.woff') format('woff'),
+         url('/fonts/BulmerMTStd-BoldItalic.woff2') format('woff2'); 
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+/* Apply the custom font to body or any specific element */
+h1 {
+    font-family: 'telegraf', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'telegraf', sans-serif;
+    font-weight: bold;
+    margin: 0px;
+    font-size: 24px;
+}
+
+body {
+    font-family: 'telegraf', sans-serif; 
+    font-weight: normal; 
+    margin: 0px;
+}
+
+p {
+    font-family: 'telegraf', sans-serif;
+    font-weight: lighter;
+    margin: 0px;
+    width: 100%; /* Ensure p elements take the full width of their parent */
+    word-wrap: break-word; /* Allow long words to break and wrap to the next line */
+    overflow-wrap: break-word; /* Alternative for ensuring long words break */
+    text-align: justify;
+}
+
+i {
+    font-style: italic;
+}
+b {
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+}
+
+/* Navigation bar */
+
+nav {
+    padding: 10px;
+    text-align: right;
+    font-size: 16pt;
+    border-bottom: 1px solid;
+    border-color: rgb(24, 24, 24);
+}
+
+nav a {
+    font-weight: normal;
+    color: rgb(24, 24, 24);
+    margin: 5px;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Default hover state */
+nav a:hover {
+    color: rgb(120, 60, 0);
+}
+
+nav a.active {
+    font-weight: bold;
+    color: rgb(250, 120, 0);
+}
+
+/* Specific hover and active colors for each link */
+.bio-link:hover {
+    color: rgb(40, 80, 0);
+}
+
+.bio-link.active {
+    color: rgb(0, 170, 0);
+}
+
+.render-link:hover {
+    color: rgb(0, 60, 120);
+}
+
+.render-link.active {
+    color: rgb(0, 120, 250);
+}
+
+.photo-link:hover {
+    color: rgb(120, 0, 0);
+}
+
+.photo-link.active {
+    color: rgb(200, 60, 0);
+}
+
+
+/* Content stuff */
+#content {
+    display: flex;
+    flex:1;
+    flex-wrap: wrap;
+    padding: 0px;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 46px);
+    overflow: hidden;
+}
+
+.column {
+    padding: 20px;
+}
+.left {
+    flex: 1;
+    justify-content: right;
+}
+.fleft {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    float: left;
+    text-align:left;
+    position: relative;
+    width: 500px; /* Set the width of the fleft class */
+    box-sizing: border-box; /* Ensures padding/border is included in width */
+}
+.right {
+    flex: 1.5;
+    justify-content: left;
+}
+.fright {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    float: right;
+    text-align: right;
+    position: relative;
+    width: 200px;
+}
+
+
+/* IMAGE CONTAINERS */
+
+#photo-content {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%; 
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center; /* Center the container vertically */
+}
+
+.image-container {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    flex: 0 0 auto;
+    align-items: center; /* Center the images vertically */
+    position: relative; /* Make the container relative for absolute positioning of the label */
+}
+
+.cover-container,
+.slide-wrapper {
+    display: flex;
+    flex: 0 0 auto;
+    height: 100%;
+    position: relative; /* Make the slide-wrapper relative for absolute positioning of the label */
+    padding: 1px 1px 2px 0px
+}
+
+.slide-wrapper img {
+    height: 100%;
+    width: auto;
+}
+
+.slide-wrapper span {
+    position: absolute;
+    color: rgb(220,220,220);
+    text-shadow: 2px 2px 7px #000000;
+    text-align: right;
+    top:50%;
+    right: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    display: block; /* Hide the label initially */
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slide-wrapper:hover span {
+    opacity: 1;
+}
+.slide-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient( -45deg, #aaaaaa70, #aaaaaa70 3px, #2b2b2b62 4px, #2b2b2b62 8px );
+    opacity: 0; /* Start with the gradient invisible */
+    transition: opacity 0.8s ease-in-out; /* Add transition for smooth effect */
+}
+
+.slide-wrapper:hover::before {
+    opacity: 1; /* Show the gradient on hover */
+    cursor: pointer;
+}
+
+/* GALLERY CONTENT */
+#gallery-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff60; /* Semi-transparent background */
+    z-index: 1;
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity 0.5s ease-in-out; /* Transition for opacity */
+}
+
+#gallery-content.show {
+    display: flex;
+    opacity: 1; /* Show the gallery with opacity transition */
+}
+
+#close-gallery {
+    position: absolute;
+    top: 100px;
+    right: 25%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+}
+
+.carousel img {
+    width: auto;
+    height: auto;
+    max-width: 60%;
+    max-height: 80vh;
+    transition: opacity 0.5s ease-in-out; /* Transition for image opacity */
+}
+
+.carousel .labels {
+    display: block;
+    opacity: 1;
+    color: white;
+    text-shadow: 2px 2px 7px #000000;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 20vw;
+    margin-left: 20px;
+}
+
+.carousel button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.carousel button:hover {
+    color: #ddd;
+}
+
+.blurred {
+    filter: blur(5px);
+}
