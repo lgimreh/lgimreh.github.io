@@ -74,11 +74,11 @@ document.addEventListener("DOMContentLoaded", function() {
 // Define the images structure directly in JavaScript
 const images = [
     // Budapest images
-    { name: "bud02.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "yes", folder: 1 },
-    { name: "bud01.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
-    { name: "bud03.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
-    { name: "bud04.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
-    { name: "bud05.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
+    { name: "bud2.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "yes", folder: 1 },
+    { name: "bud1.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
+    { name: "bud3.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
+    { name: "bud4.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
+    { name: "bud5.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
     // Gropius House
     { name: "gro6.jpg", label: "Gropius House", architect: "Walter Gropius", details: "Lincoln, MA, USA", cover: "yes", folder: 2 },
     { name: "gro3.jpg", label: "Gropius House", architect: "Walter Gropius", details: "Lincoln, MA", cover: "no", folder: 2 },
