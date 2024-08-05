@@ -162,27 +162,27 @@ nav a.active {
 
 /* Specific hover and active colors for each link */
 .bio-link:hover {
-    color: rgb(40, 80, 0);
+    color: #485828;
 }
 
 .bio-link.active {
-    color: rgb(0, 170, 0);
+    color: #749440;
 }
 
 .render-link:hover {
-    color: rgb(0, 60, 120);
+    color: #114a64;
 }
 
 .render-link.active {
-    color: rgb(0, 120, 250);
+    color: #70a5c9;
 }
 
 .photo-link:hover {
-    color: rgb(120, 0, 0);
+    color: #663218;
 }
 
 .photo-link.active {
-    color: rgb(200, 60, 0);
+    color: #e48871;
 }
 
 
