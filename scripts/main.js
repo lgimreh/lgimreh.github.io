@@ -74,11 +74,11 @@ document.addEventListener("DOMContentLoaded", function() {
 // Define the images structure directly in JavaScript
 const images = [
     // Budapest images
-    { name: "bud02.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "yes", folder: 1 },
-    { name: "bud01.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
-    { name: "bud03.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
-    { name: "bud04.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
-    { name: "bud05.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
+    { name: "bud2.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "yes", folder: 1 },
+    { name: "bud1.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
+    { name: "bud3.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
+    { name: "bud4.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
+    { name: "bud5.jpg", label: "Musée ethnographique", architect: "Napur Architect", details: "Budapest, HU", cover: "no", folder: 1 },
     // Gropius House
     { name: "gro6.jpg", label: "Gropius House", architect: "Walter Gropius", details: "Lincoln, MA, USA", cover: "yes", folder: 2 },
     { name: "gro3.jpg", label: "Gropius House", architect: "Walter Gropius", details: "Lincoln, MA", cover: "no", folder: 2 },
@@ -103,11 +103,15 @@ const images = [
 
 const renders = [
     // BIOMES
-    { name: "bio1.jpg", label: "Biomes", architect: "", details: "", cover: "yes", folder: 2 },
-    { name: "bio1.2.jpg", label: "", architect: "", details: "Projet spéculatif supervisé par Jean Verville. Le projet imagine une cité verticale construite à base de fragments de plate-formes pétrolières, en chantier perpétuel.", cover: "no", folder: 2 },
-    { name: "bio3.jpg", label: "", architect: "", details: "À l'intérieur des aires de vie de la ville, on retrouve un assemblage polyphonique de mobiliers de plateforme récupérés et des possessions que les habitants amènent avec eux depuis leurs pays natals.", cover: "no", folder: 2 },
-    { name: "bio2.jpg", label: "", architect: "", details: "La circulation verticale dans la tour se fait à plusieurs échelles et degrés de vitesse. Le moyen plus lent et répandu est l'escalier, mais on retrouve également des ascenseurs pour les déplacements intermédiaires et l'hélicoptère pour des distances verticales exceptionnelles.", cover: "no", folder: 2 },
-    { name: "bio4.jpg", label: "", architect: "", details: "L'autosuffisance de la tour est assurée par la récupération d'eaux de pluie, de l'humidité des nuages dépendamment de la hauteur. Au bas de la tour, l'océan sert de grande ressource pour l'alimentation. Chaque goutte d'eau est utilisée au mieux possible.", cover: "no", folder: 2 },
+    { name: "bio1.jpg", label: "Biomes", architect: "Projet spéculatif", details: "", cover: "yes", folder: 2 },
+    { name: "bio1.2.jpg", label: "Biomes", architect: "Projet spéculatif", details: "Projet spéculatif supervisé par Jean Verville. Le projet imagine une cité verticale construite à base de fragments de plate-formes pétrolières, en chantier perpétuel.", cover: "no", folder: 2 },
+    { name: "bio3.jpg", label: "Biomes", architect: "Projet spéculatif", details: "À l'intérieur des aires de vie de la ville, on retrouve un assemblage polyphonique de mobiliers de plateforme récupérés et des possessions que les habitants amènent avec eux depuis leurs pays natals.", cover: "no", folder: 2 },
+    { name: "bio2.jpg", label: "Biomes", architect: "Projet spéculatif", details: "La circulation verticale dans la tour se fait à plusieurs échelles et degrés de vitesse. Le moyen plus lent et répandu est l'escalier, mais on retrouve également des ascenseurs pour les déplacements intermédiaires et l'hélicoptère pour des distances verticales exceptionnelles.", cover: "no", folder: 2 },
+    { name: "bio4.jpg", label: "Biomes", architect: "Projet spéculatif", details: "L'autosuffisance de la tour est assurée par la récupération d'eaux de pluie, de l'humidité des nuages dépendamment de la hauteur. Au bas de la tour, l'océan sert de grande ressource pour l'alimentation. Chaque goutte d'eau est utilisée au mieux possible.", cover: "no", folder: 2 },
+    // STRUCTURE BOIS
+    { name: "res1.jpg", label: "Structures en bois", architect: "Client privé", details: "", cover: "yes", folder: 3 },
+    { name: "res2.jpg", label: "Structures en bois", architect: "Client privé", details: "", cover: "no", folder: 3 },
+    { name: "res3.jpg", label: "Structures en bois", architect: "Client privé", details: "", cover: "no", folder: 3 },
     // MUSIQUE POUR QUATRE RÈGNES
     { name: "mus1.2.jpg", label: "Musique pour quatre règnes", architect: "Essai-projet", details: "", cover: "yes", folder: 3 },
     { name: "mus1.jpg", label: "Musique pour quatre règnes", architect: "Essai-projet", details: "", cover: "no", folder: 3 },
@@ -115,11 +119,11 @@ const renders = [
     { name: "mus3.jpg", label: "Musique pour quatre règnes", architect: "Essai-projet", details: "", cover: "no", folder: 3 },
     { name: "mus4.jpg", label: "Musique pour quatre règnes", architect: "Essai-projet", details: "", cover: "no", folder: 3 },
     // CABO
-    { name: "cabo1.jpg", label: "Cabo", architect: "", details: "", cover: "yes", folder: 1 },
-    { name: "cabo2.jpg", label: "Cabo", architect: "", details: "Image réalisée pour pratiquer le photoréalisme", cover: "no", folder: 1 },
+    { name: "cabo1.jpg", label: "Cabo", architect: "Projet personnel", details: "", cover: "yes", folder: 1 },
+    { name: "cabo2.jpg", label: "Cabo", architect: "Projet personnel", details: "Image réalisée pour pratiquer le photoréalisme", cover: "no", folder: 1 },
     // REPLI
-    { name: "repli.jpg", label: "Le repli", architect: "", details: "", cover: "yes", folder: 4 },
-    { name: "repli2.jpg", label: "", architect: "", details: "Projet de conception d'un chalet de moins de 100m² au Parc national de la Jacques-Cartier", cover: "no", folder: 4 },
+    { name: "repli.jpg", label: "Le repli", architect: "Projet résidentiel", details: "", cover: "yes", folder: 4 },
+    { name: "repli2.jpg", label: "Le repli", architect: "", details: "Projet de conception d'un chalet de moins de 100m² au Parc national de la Jacques-Cartier", cover: "no", folder: 4 },
     
   ];
 
